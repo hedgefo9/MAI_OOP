@@ -1,0 +1,17 @@
+# ninja log v5
+5481	5517	1695365608369504169	lib/libgmock.a	a3149f2f86b8e2f4
+3	1153	1695370868342546272	CMakeFiles/oop_lab1_test.dir/test/tests.cpp.o	f23d3b3436ae36b8
+1	276	1695370508007724141	CMakeFiles/oop_lab1.dir/src/Solution.cpp.o	eb4e5557d4ca86b7
+281	389	1695370508119726258	oop_lab1	e5ca0aeb8a44970b
+5406	5481	1695365608333502271	lib/libgtest.a	4c49e831a3ea5f59
+0	86	1695371323275673690	build.ninja	1bbbb2c142ae2da3
+1153	1321	1695370868510549456	oop_lab1_test	3d60f30f476c7091
+2	5405	1695365608253498053	googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	576e5e81470f0dbf
+4	281	1695370736752053195	CMakeFiles/oop_lab1_test.dir/src/Solution.cpp.o	faee430647a6fc4b
+1	2950	1695365605801368943	googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	55051f63ba603ac3
+5517	5525	1695365608381504801	lib/libgmock_main.a	bb9df2364afa83ab
+2	1407	1695365604261287989	googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	f6a7db3a651d8444
+1	1660	1695365604513301230	googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	5371caee84f6a4d0
+0	281	1695370508015724292	CMakeFiles/oop_lab1.dir/main.cpp.o	666399595ff48079
+5481	5490	1695365608345502903	lib/libgtest_main.a	25a7cea1133d845e
+1	1854	1695365604709311529	CMakeFiles/oop_lab1.dir/test/tests.cpp.o	3b646da6fe7a4213
