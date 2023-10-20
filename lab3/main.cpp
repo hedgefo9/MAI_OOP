@@ -8,6 +8,15 @@
 
 int main() {
 
+    /*
+    Triangle t0;
+    std::cin >> t0;
+    Point p0 = t0.geom_center();
+    std::cout << t0 << std::endl;
+    std::cout << p0 << std::endl;
+    std::cout << t0.area() << std::endl << std::endl;
+    */
+
     Triangle t1(Point(1, sqrt(3)), Point(2, 0), Point(0, 0));
     Point p1 = t1.geom_center();
     std::cout << t1 << std::endl;

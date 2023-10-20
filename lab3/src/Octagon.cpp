@@ -97,7 +97,9 @@ bool Octagon::operator==(const Octagon &other) {
 }
 
 std::istream &operator>>(std::istream &in, Octagon &a) {
-    in >> a.p1 >> a.p2 >> a.p3 >> a.p4 >> a.p5 >> a.p6 >> a.p7 >> a.p8;
+    Point p1, p2, p3, p4, p5, p6, p7, p8;
+    in >> p1 >> p2 >> p3 >> p4 >> p5 >> p6 >> p7 >> p8;
+    a = Octagon(p1, p2, p3, p4, p5, p6, p7, p8);
     return in;
 }
 

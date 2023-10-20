@@ -81,7 +81,10 @@ bool Hexagon::operator==(const Hexagon &other) {
 }
 
 std::istream &operator>>(std::istream &in, Hexagon &a) {
-    in >> a.p1 >> a.p2 >> a.p3 >> a.p4 >> a.p5 >> a.p6;
+    Point p1, p2, p3, p4, p5, p6;
+    in >> p1 >> p2 >> p3 >> p4 >> p5 >> p6;
+    a = Hexagon(p1, p2, p3, p4, p5, p6);
+
     return in;
 }
 

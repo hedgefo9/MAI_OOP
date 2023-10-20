@@ -62,7 +62,10 @@ bool Triangle::operator==(const Triangle &other) {
 }
 
 std::istream &operator>>(std::istream &in, Triangle &a) {
-    in >> a.p1 >> a.p2 >> a.p3;
+    Point p1, p2, p3;
+    in >> p1 >> p2 >> p3;
+    a = Triangle(p1, p2, p3);
+
     return in;
 }
 
