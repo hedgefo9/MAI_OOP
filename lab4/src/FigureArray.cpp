@@ -7,6 +7,33 @@ template<typename T>
 FigureArray<T>::FigureArray() {}
 
 template<typename T>
+FigureArray<T>::FigureArray(std::initializer_list<std::shared_ptr<Figure<T>>> list) {
+    figures = std::shared_ptr<std::shared_ptr<Figure<T>>[]>(new std::shared_ptr<Figure<T>>[list.size()]);
+    for (size_t i = 0; i < list.size(); ++i) {
+        figures[i] = list[i];
+    }
+    sz = list.size();
+}
+
+template<typename T>
+FigureArray<T>::FigureArray(const FigureArray<T> &other) {
+    figures = std::shared_ptr<std::shared_ptr<Figure<T>>[]>(new std::shared_ptr<Figure<T>>[other.size()]);
+    for (size_t i = 0; i < other.figures.size(); ++i) {
+        figures[i] = other.figures[i];
+    }
+    sz = other.figures.size();
+}
+
+template<typename T>
+FigureArray<T>::FigureArray(FigureArray<T> &&other) noexcept {
+    sz = other.sz;
+    figures = other.figures;
+
+    other.sz = 0;
+    other.figures = nullptr;
+}
+
+template<typename T>
 size_t FigureArray<T>::size() const {
     return sz;
 }
@@ -61,8 +88,8 @@ void FigureArray<T>::print_geom_center() const {
 }
 
 template<typename T>
-double FigureArray<T>::total_area() const {
-    double current_area = 0;
+T FigureArray<T>::total_area() const {
+    T current_area = 0;
     for (size_t i = 0; i < size(); ++i) {
         current_area += figures[i]->area();
     }

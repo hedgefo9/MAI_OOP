@@ -13,6 +13,9 @@ private:
 
 public:
     FigureArray();
+    FigureArray(std::initializer_list<std::shared_ptr<Figure<T>>> list);
+    FigureArray(const FigureArray<T>& other);
+    FigureArray(FigureArray<T>&& other) noexcept ;
     size_t size() const;
 
     template<typename U>
@@ -21,7 +24,7 @@ public:
     friend std::ostream& operator<<(std::ostream& out, FigureArray<U>& a);
 
     void print_geom_center() const;
-    double total_area() const;
+    T total_area() const;
     operator double() const;
 
     void erase(size_t index);

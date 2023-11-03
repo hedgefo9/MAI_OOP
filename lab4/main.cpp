@@ -45,7 +45,7 @@ int main() {
     std::cout << o1 << std::endl;
     std::cout << p4 << std::endl;
     std::cout << o1.area() << std::endl << std::endl;
-    
+
     /*
     FigureArray<double> fa{};
     std::cin >> fa;
