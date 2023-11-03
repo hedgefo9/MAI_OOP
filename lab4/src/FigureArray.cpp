@@ -4,9 +4,7 @@
 
 
 template<typename T>
-FigureArray<T>::FigureArray() {
-
-}
+FigureArray<T>::FigureArray() {}
 
 template<typename T>
 size_t FigureArray<T>::size() const {
@@ -18,7 +16,7 @@ std::istream &operator>>(std::istream &in, FigureArray<U> &a) {
     size_t quantity;
     in >> quantity;
 
-    a.figures = new std::shared_ptr<Figure<U>>[quantity];
+    a.figures = std::shared_ptr<std::shared_ptr<Figure<U>>[]>(new std::shared_ptr<Figure<U>>[quantity]);
 
     char figure_type = '\0';
     for (size_t i = 0; i < quantity; ++i) {

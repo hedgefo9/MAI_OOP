@@ -8,7 +8,7 @@
 template<typename T>
 class FigureArray {
 private:
-    std::shared_ptr<Figure<T>>* figures;
+    std::shared_ptr<std::shared_ptr<Figure<T>>[]> figures;
     size_t sz = 0;
 
 public:
